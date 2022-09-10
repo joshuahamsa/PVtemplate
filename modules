@@ -1,0 +1,60 @@
+// Place all pre-population data into a single data structure 
+var modList = {
+ 
+SPR320:{ module: "SunPower SPR E19-320", wattage: "320", voc: "64.8", vmp: "54.7", isc: "6.24", imp: "5.86", ptc: "296.3", length: "61.4", width: "41.2", weight: "41", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+LG400: { module: "LG LG400N2W-A5", wattage: "400", voc: "49.3", vmp: "40.6", isc: "10.47", imp: "9.86", ptc: "368.4", length: "79.7", width: "40.3", weight: "47.81", POmod: "505", MaxinDC: "17.5", MaxinV: "83", MaxoutA: "15", Maxoutv: "85" }, 
+
+LG335 : { module: "LG LG335N1C-A5", wattage: "335", voc: "41.0", vmp: "34.1", isc: " 10.49", imp: "9.83", ptc: "311.1", length: "66.4", width: "40", weight: "39.68", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+HY370:{ module: "Hyundai HiS-S370RI", wattage: "370", voc: "47.8", vmp: "39.5", isc: "10.0", imp: "9.4", ptc: "336.7", length: "77.17", width: "39.29", weight: "48.75", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+HY375:{ module: "Hyundai HiS-S375RI", wattage: "375", voc: "48", vmp: "39.7", isc: "10.0", imp: "9.4", ptc: "340.2", length: "77.17", width: "39.29", weight: "48.75", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+SW285:{ module: "SolarWorld SW285 Mono", wattage: "285", voc: "39.7", vmp: "31.3", isc: "9.84", imp: "9.2", ptc: "259.1", length: "65.95", width: "39.4", weight: "39.7", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+LG360:{ module: "LG360Q1C-A5", wattage: "360", voc: "42.7", vmp: "36.5", isc: "10.79", imp: "9.87", ptc: "337.6", length: "66.38", width: "40", weight: "40.79", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+SE330:{ module: "SunEdison SE-F330BzC-3y", wattage: "330", voc: "46.2", vmp: "37.8", isc: "9.18", imp: "8.78", ptc: "298.7", length: "77.8", width: "39", weight: "41.88", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+SW275:{ module: "SolarWorld SW275 Mono", wattage: "275", voc: "39.4", vmp: "31", isc: "9.58", imp: "8.94", ptc: "249.7", length: "65.95", width: "39.4", weight: "39.7", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+PAN330:{ module: "Panasonic VBHN330SA17", wattage: "330", voc: "69.7", vmp: "58.0", isc: "6.07", imp: "5.7", ptc: "311.7", length: "62.4", width: "41.5", weight: "40.81", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+QCELL345:{ module: "Hanwha Q.Plus L-G4.2 345", wattage: "345", voc: "47.46", vmp: "37.93", isc: "9.64", imp: "9.09", ptc: "316.9", length: "78.50", width: "39.37", weight: "52.91", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+QCELL415:{ module: "Hanwha Q.Plus L-G6.3 415", wattage: "415", voc: "48.63", vmp: "40.58", isc: "10.74", imp: "10.23", ptc: "386", length: "78.50", width: "39.37", weight: "52.91", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" }, 
+
+LG420: { module: "LG LG420N2W-V5", wattage: "420", voc: "49.7", vmp: "42.1", isc: "10.63", imp: "9.98", ptc: "386.9", length: "79.7", width: "40.3", weight: "47.81", POmod: "505", MaxinDC: "17.5", MaxinV: "83", MaxoutA: "15", Maxoutv: "85" },
+
+CAN320: { module:"Canadian Solar CS1H-320MS", wattage: "320", voc: "43.3", vmp: "35.8", isc: "9.51", imp: "9.01", ptc: "298.4", length: "66.9", width: "39.1", weight: "42.3", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" },
+
+MSE385: { module:"Mission Solar MSE385SR9S", wattage: "385", voc: "48.53", vmp: "46.43", isc: "9.99", imp: "9.43", ptc: "356", length: "78.7", width: "39.7", weight: "50.7", POmod: "400", MaxinDC: "12.6", MaxinV: "80", MaxoutA: "15", Maxoutv: "60" },
+
+}; 
+function Inheritance(modProps) { 
+    // Populate fields with values from the Module List Object 
+
+    this.getField("Module").value = modList[modProps].module;
+    this.getField("sld.Str1.Module").value = modList[modProps].module;
+    this.getField("sld.Str2.Module").value = modList[modProps].module; 
+    this.getField("sld.Str3.Module").value = modList[modProps].module; 
+
+    this.getField("ModW").value = modList[modProps].wattage;                
+    this.getField("PTC").value = modList[modProps].ptc;
+
+
+    this.getField("sld.Str1.VOC").value = modList[modProps].voc; 
+    this.getField("sld.Str1.VMP").value = modList[modProps].vmp; 
+    this.getField("sld.Str1.ISC").value = modList[modProps].isc; 
+    this.getField("sld.Str1.IMP").value = modList[modProps].imp;
+    this.getField("SLDVOC").value = modList[modProps].voc; 
+    this.getField("SLDVMP").value = modList[modProps].vmp; 
+    this.getField("SLDISC").value = modList[modProps].isc; 
+    this.getField("SLDIMP").value = modList[modProps].imp;
+
+
+    this.getField("ModLength").value = modList[modProps].length;
+    this.getField("ModWidth").value = modList[modProps].width;
+    this.getField("ModWeight").value = modList[modProps].weight;
+} 
