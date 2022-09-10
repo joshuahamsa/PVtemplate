@@ -1,0 +1,10 @@
+function ctrlLayers()
+{
+    // get the radio button state
+    var sel = this.getField("modList").value;
+
+    var ocgs = this.getOCGs();
+    for (i=0; i < ocgs.length; i++) {
+        ocgs[i].state = (ocgs[i].name == sel);
+    }
+}
