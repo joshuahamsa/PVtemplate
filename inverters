@@ -1,0 +1,55 @@
+// Place all pre-population data into a single data structure 
+var invList = {
+ 
+"SE.3000":{ inverter: "SolarEdge SE3000H-US (240V)[SI1]", acdsize: "30", imax: "12.5", acwiresize: "10", tf: "40", ocpd: "20", okft: "1.24" }, 
+
+"SE.3800": { inverter: "SolarEdge SE3800H-US (240V)[SI1]", acdsize: "30", imax: "16", acwiresize: "10", tf: "40", ocpd: "20", okft: "1.24" }, 
+
+"SE.5000": { inverter: "SolarEdge SE5000H-US (240V)[SI1]", acdsize: "30", imax: "21", acwiresize: "10", tf: "40", ocpd: "30", okft: "1.24" }, 
+
+"SE.6000":{ inverter: "SolarEdge SE6000H-US (240V)[SI1]", acdsize: "60", imax: "25", acwiresize: "10", tf: "40", ocpd: "40", okft: "1.24" }, 
+
+"SE.7600":{ inverter: "SolarEdge SE7600H-US (240V)[SI1]", acdsize: "60", imax: "32", acwiresize: "8", tf: "55", ocpd: "40", okft: ".778" }, 
+
+"SE.10000":{ inverter: "SolarEdge SE10000H-US (240V)[SI1]", acdsize: "60", imax: "42", acwiresize: "6", tf: "75", ocpd: "60", okft: ".491" }, 
+
+"SE.11400":{ inverter: "SolarEdge SE11400H-US (240V)[SI1]", acdsize: "60", imax: "47.5", acwiresize: "6", tf: "75", ocpd: "60", okft: ".491" }, 
+
+"YC.1str":{ inverter: "APSystems YC600", acdsize: "30", imax: "2.28", acwiresize: "10", tf: "40", ocpd: "20", okft: "1.24" }, 
+
+"YC.2str":{ inverter: "APSystems YC600", acdsize: "60", imax: "2.28", acwiresize: "8", tf: "55", ocpd: "40", okft: ".778" }, 
+
+"YC.3str":{ inverter: "APSystems YC600", acdsize: "60", imax: "2.28", acwiresize: "6", tf: "75", ocpd: "60", okft: ".491" }, 
+
+"IQ7.1str":{ inverter: "Enphase IQ7-60-2-US", acdsize: "30", imax: "1.04", acwiresize: "10", tf: "40", ocpd: "20", okft: "1.24" }, 
+
+"IQ7.2str":{ inverter: "Enphase IQ7-60-2-US", acdsize: "60", imax: "1.04", acwiresize: "8", tf: "55", ocpd: "40", okft: ".778" }, 
+
+"IQ7.3str":{ inverter: "Enphase IQ7-60-2-US", acdsize: "60", imax: "1.04", acwiresize: "6", tf: "75", ocpd: "60", okft: ".491" },
+
+"IQ7plus.1str":{ inverter: "Enphase IQ7Plus-72-2-US", acdsize: "30", imax: "1.21", acwiresize: "10", tf: "40", ocpd: "20", okft: "1.24" }, 
+
+"IQ7plus.2str":{ inverter: "Enphase IQ7Plus-72-2-US", acdsize: "60", imax: "1.21", acwiresize: "8", tf: "55", ocpd: "40", okft: ".778" }, 
+
+"IQ7plus.3str":{ inverter: "Enphase IQ7Plus-72-2-US", acdsize: "60", imax: "1.21", acwiresize: "6", tf: "75", ocpd: "60", okft: ".491" }, 
+
+"StorE.3800":{ inverter: "SolarEdge StorEdge SE3800A", acdsize: "30", imax: "16", acwiresize: "10", tf: "40", ocpd: "20", okft: "1.24" }, 
+
+"StorE.7600":{ inverter: "SolarEdge StorEdge SE7600A", acdsize: "60", imax: "32", acwiresize: "8", tf: "55", ocpd: "40", okft: ".778" }, 
+}; 
+function InverterInherit(invProps) { 
+    // Populate fields with values from the Inverter List Object 
+
+    this.getField("InvText").value = invList[invProps].inverter; 
+    this.getField("sld.Str1.Inv").value = invList[invProps].inverter; 
+    this.getField("sld.Str2.Inv").value = invList[invProps].inverter; 
+    this.getField("sld.Str3.Inv").value = invList[invProps].inverter; 
+
+    this.getField("ACDsize").value = invList[invProps].acdsize; 
+    this.getField("Imax").value = invList[invProps].imax; 
+    this.getField("ACWiresize").value = invList[invProps].acwiresize; 
+    this.getField("TF").value = invList[invProps].tf; 
+    this.getField("ocpd").value = invList[invProps].ocpd;
+    this.getField("Okft").value = invList[invProps].okft; 
+
+} 
